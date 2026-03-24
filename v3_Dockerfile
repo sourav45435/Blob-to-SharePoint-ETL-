@@ -1,0 +1,28 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY ["src/SharePointMigration.csproj", "./src/"]
+RUN dotnet restore "src/SharePointMigration.csproj"
+
+COPY . .
+RUN dotnet build "src/SharePointMigration.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "src/SharePointMigration.csproj" -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/runtime:8.0
+WORKDIR /app
+
+RUN groupadd -r dotnetuser && useradd -r -g dotnetuser dotnetuser
+
+COPY --from=publish /app/publish .
+COPY appsettings.json .
+COPY appsettings.Production.json .
+COPY pathMappings.json .
+
+RUN mkdir -p logs reports manifests && \
+    chown -R dotnetuser:dotnetuser /app
+
+USER dotnetuser
+
+ENTRYPOINT ["dotnet", "SharePointMigration.dll"]

@@ -1,0 +1,16 @@
+{
+  "mappings": [
+    {
+      "sourcePrefix": "raw-documents/",
+      "targetPrefix": "Documents/Processed/"
+    },
+    {
+      "sourcePrefix": "reports/2024/",
+      "targetPrefix": "Reports/FY2024/"
+    },
+    {
+      "sourcePrefix": "archive/legacy/*",
+      "targetPrefix": "Archive/"
+    }
+  ]
+}

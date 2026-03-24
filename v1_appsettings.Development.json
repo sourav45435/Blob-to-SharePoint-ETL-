@@ -1,0 +1,11 @@
+{
+  "Migration": {
+    "DryRun": true
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft": "Information"
+    }
+  }
+}

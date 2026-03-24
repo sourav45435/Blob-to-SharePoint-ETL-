@@ -1,0 +1,32 @@
+{
+  "AzureBlob": {
+    "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=YOUR_ACCOUNT;AccountKey=YOUR_KEY;EndpointSuffix=core.windows.net",
+    "ContainerName": "documents",
+    "MaxDegreeOfParallelism": 5
+  },
+  "SharePoint": {
+    "SiteUrl": "https://yourtenant.sharepoint.com/sites/yoursite",
+    "LibraryName": "Documents",
+    "ClientId": "YOUR_CLIENT_ID",
+    "ClientSecret": "YOUR_CLIENT_SECRET",
+    "TenantId": "YOUR_TENANT_ID",
+    "BatchSize": 100,
+    "MaxRetries": 3,
+    "TimeoutSeconds": 300
+  },
+  "Migration": {
+    "PathMappingsFile": "pathMappings.json",
+    "ConcurrencyLevel": 5,
+    "PreserveModificationDates": true,
+    "DryRun": false,
+    "ManifestOutputPath": "./manifests",
+    "MaxFileSizePerBatch": 1048576000
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "System": "Warning"
+    }
+  }
+}

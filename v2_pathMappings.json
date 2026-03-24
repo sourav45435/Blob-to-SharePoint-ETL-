@@ -1,0 +1,22 @@
+{
+  "mappings": [
+    {
+      "sourcePrefix": "raw-documents/",
+      "targetPrefix": "Documents/Processed/",
+      "description": "Move raw documents to processed folder",
+      "enabled": true
+    },
+    {
+      "sourcePrefix": "reports/2024/",
+      "targetPrefix": "Reports/FY2024/",
+      "description": "Map 2024 reports to fiscal year 2024",
+      "enabled": true
+    },
+    {
+      "sourcePrefix": "archive/legacy/*",
+      "targetPrefix": "Archive/Legacy/",
+      "description": "Move legacy archive items",
+      "enabled": true
+    }
+  ]
+}

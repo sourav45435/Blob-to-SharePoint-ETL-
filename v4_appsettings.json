@@ -1,0 +1,16 @@
+{
+  "azureBlob": {
+    "connectionString": "DefaultEndpointsProtocol=https;AccountName=YOUR_STORAGE_ACCOUNT;AccountKey=YOUR_STORAGE_KEY;EndpointSuffix=core.windows.net",
+    "containerName": "documents",
+    "maxFiles": 2
+  },
+  "sharePoint": {
+    "siteUrl": "https://yourtenant.sharepoint.com/sites/yoursite",
+    "libraryName": "Documents"
+  },
+  "migration": {
+    "enableLocalSave": true,
+    "outputFolder": "migrated_files",
+    "enableReporting": true
+  }
+}

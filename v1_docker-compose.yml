@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  sharepoint-migration:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sharepoint-etl
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - SP_AZUREBLOB__CONNECTIONSTRING=DefaultEndpointsProtocol=https;AccountName=${AZURE_ACCOUNT};AccountKey=${AZURE_KEY};EndpointSuffix=core.windows.net
+      - SP_AZUREBLOB__CONTAINERNAME=${CONTAINER_NAME}
+      - SP_SHAREPOINT__SITEURL=${SHAREPOINT_SITE_URL}
+      - SP_SHAREPOINT__CLIENTID=${SHAREPOINT_CLIENT_ID}
+      - SP_SHAREPOINT__CLIENTSECRET=${SHAREPOINT_CLIENT_SECRET}
+      - SP_SHAREPOINT__TENANTID=${SHAREPOINT_TENANT_ID}
+    volumes:
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+      - ./manifests:/app/manifests
+    restart: no

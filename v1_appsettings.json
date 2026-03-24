@@ -1,0 +1,26 @@
+{
+  "AzureBlob": {
+    "ConnectionString": "YOUR_BLOB_CONNECTION_STRING",
+    "ContainerName": "YOUR_CONTAINER_NAME"
+  },
+  "SharePoint": {
+    "SiteUrl": "https://YOURTENANT.sharepoint.com/sites/YOURSITE",
+    "LibraryName": "Documents",
+    "ClientId": "YOUR_CLIENT_ID",
+    "ClientSecret": "YOUR_CLIENT_SECRET",
+    "TenantId": "YOUR_TENANT_ID",
+    "BatchSize": 100,
+    "MaxRetries": 3
+  },
+  "Migration": {
+    "PathMappingsFile": "pathMappings.json",
+    "ConcurrencyLevel": 5,
+    "PreserveModificationDates": true
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  }
+}
