@@ -1,9 +1,8 @@
 # Copilot Chat Conversation Export: .NET ETL application for Azure to
 
-**User:** @Varun1585
 
 
-## @Varun1585
+
 
 I need a clean, repeatable .NET ETL application that moves documents now stored in Azure Blob Storage into SharePoint Online, leveraging the SharePoint Migration API rather than manual uploads. Application should be deployable to Azure Portal. it is required to run for lenthy hours. hence no time barred solution like azure functins. The content consists mainly of PDF files, but there are also CSV and HTML documents mixed in. During the move I want to reorganise the folder structure: it should stay recognisable, yet certain sub-folders need to be merged or renamed to match our new SharePoint information architecture.
 
