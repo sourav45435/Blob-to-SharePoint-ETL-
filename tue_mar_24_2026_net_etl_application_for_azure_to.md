@@ -1,7 +1,7 @@
 # Copilot Chat Conversation Export: .NET ETL application for Azure to
 
 **User:** @Varun1585
-**Thread URL:** https://github.com/copilot/c/3fc575e4-c493-4fd0-9ddd-d23a2cb8c0b0
+
 
 ## @Varun1585
 
